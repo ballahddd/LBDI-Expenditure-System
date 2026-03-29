@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="LBDI Budget Expenditure Tracker Login" />
+    <title>LBDI Expenditure Tracker — Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script defer src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-label="Login">
+        <header class="card__header">
+          <div class="brand">
+            <div class="brand__mark" aria-hidden="true">
+              <span class="brand__markInner"></span>
+            </div>
+            <div class="brand__text">
+              <p class="brand__org">Liberian Bank for Development &amp; Investment</p>
+              <h1 class="brand__app">Budget Expenditure Tracker</h1>
+            </div>
+          </div>
+          <p class="subtitle">Sign in to continue.</p>
+        </header>
+
+        <form class="form" id="loginForm" action="./login.php" method="post" novalidate>
+          <div class="field">
+            <label class="label" for="email">Email or Username</label>
+            <div class="control">
+              <input
+                class="input"
+                id="email"
+                name="identifier"
+                type="text"
+                inputmode="email"
+                autocomplete="username"
+                placeholder="e.g. j.doe@lbdi.org"
+                required
+              />
+            </div>
+            <p class="hint" id="emailHint">Use your official email or assigned username.</p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="password">Password</label>
+            <div class="control control--withButton">
+              <input
+                class="input"
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Enter your password"
+                minlength="6"
+                required
+              />
+              <button class="iconBtn" type="button" id="togglePassword" aria-label="Show password">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" focusable="false">
+                    <path
+                      fill="currentColor"
+                      d="M12 5c5.05 0 9.27 3.11 11 7.5C21.27 16.89 17.05 20 12 20S2.73 16.89 1 12.5C2.73 8.11 6.95 5 12 5Zm0 2C8.11 7 4.75 9.27 3.18 12.5 4.75 15.73 8.11 18 12 18s7.25-2.27 8.82-5.5C19.25 9.27 15.89 7 12 7Zm0 2.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="hint">Keep your credentials confidential.</p>
+          </div>
+
+          <div class="row">
+            <label class="check">
+              <input class="check__input" type="checkbox" name="remember" value="1" />
+              <span class="check__box" aria-hidden="true"></span>
+              <span class="check__label">Remember me</span>
+            </label>
+
+            <a class="link" href="./forgot-password.html">Forgot password?</a>
+          </div>
+
+          <div class="alerts" aria-live="polite" aria-atomic="true">
+            <div class="alert alert--success" id="formSuccess" hidden></div>
+            <div class="alert alert--error" id="formError" hidden></div>
+          </div>
+
+          <button class="btn" type="submit" id="submitBtn">
+            <span class="btn__text">Sign in</span>
+            <span class="btn__spinner" aria-hidden="true"></span>
+          </button>
+
+          <footer class="card__footer">
+            <p class="fineprint">
+              Authorized use only. Activity may be monitored for security and compliance.
+            </p>
+            <p class="fineprint" style="margin-top:8px">
+              No account yet? <a class="link" href="./register.html">Create one</a>
+            </p>
+          </footer>
+        </form>
+      </section>
+
+      <aside class="side" aria-label="Information">
+        <div class="side__content">
+          <h2 class="side__title">Track spending with clarity</h2>
+          <ul class="side__list">
+            <li>Budget allocations &amp; expenditure recording</li>
+            <li>Department-level summaries and approvals</li>
+            <li>Audit-friendly logs and exports</li>
+          </ul>
+          <p class="side__note">
+            Tip: Use a strong password and sign out on shared devices.
+          </p>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
